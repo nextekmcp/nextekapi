@@ -1,18 +1,18 @@
-import { GudTekMCPConfig, GudTekMCPContext } from "../types";
+import { NexTekMCPConfig, NexTekMCPContext } from "../types";
 import { Tool } from "./tool";
 import { MCPClient } from "../mcp";
-import { GudTekMCP } from "./gudtekmcp";
+import { NexTekMCP } from "./Nextekmcp";
 
 export class Agent {
-  private config: GudTekMCPConfig;
+  private config: NexTekMCPConfig;
   private tools: Map<string, Tool>;
-  private context: GudTekMCPContext;
+  private context: NexTekMCPContext;
   private mcpClient?: MCPClient;
-  private GudTekMCP: GudTekMCP;
+  private NexTekMCP: NexTekMCP;
 
-  constructor(config: GudTekMCPConfig, GudTekMCP: GudTekMCP) {
+  constructor(config: NexTekMCPConfig, NexTekMCP: NexTekMCP) {
     this.config = config;
-    this.GudTekMCP = GudTekMCP;
+    this.NexTekMCP = NexTekMCP;
     this.tools = new Map();
     this.context = {
       connection: config.connection,
@@ -34,11 +34,11 @@ export class Agent {
         endpoint: this.config.mcp.endpoint,
         apiKey: this.config.mcp.apiKey,
         model: "gpt-4",
-        name: "GudTekMCP-agent",
+        name: "NexTekMCP-agent",
         version: "0.1.0",
       });
       await this.mcpClient.initialize();
-      await this.mcpClient.registerTools(this.tools, this.GudTekMCP);
+      await this.mcpClient.registerTools(this.tools, this.NexTekMCP);
       await this.mcpClient.startServer();
     }
   }
@@ -51,7 +51,7 @@ export class Agent {
     return this.tools;
   }
 
-  public getContext(): GudTekMCPContext {
+  public getContext(): NexTekMCPContext {
     return this.context;
   }
 

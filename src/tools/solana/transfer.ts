@@ -7,7 +7,7 @@ import {
 } from "@solana/web3.js";
 import { z } from "zod";
 import { BaseTool } from "../../core/tool";
-import { GudTekMCPContext } from "../../types";
+import { NexTekMCPContext } from "../../types";
 import {
   getAssociatedTokenAddress,
   createAssociatedTokenAccountInstruction,
@@ -34,7 +34,7 @@ class TransferTool extends BaseTool {
 
   async execute(
     params: { to: string; amount: number; tokenAddress?: string },
-    context: GudTekMCPContext
+    context: NexTekMCPContext
   ): Promise<any> {
     if (!context.wallet) {
       throw new Error("No wallet available in context");

@@ -1,20 +1,20 @@
-import { GudTekMCP } from "./core/gudtekmcp";
+import { NexTekMCP } from "./core/Nextekmcp";
 import { Agent } from "./core/agent";
 import { Tool, BaseTool } from "./core/tool";
 import {
-  GudTekMCPConfig,
-  GudTekMCPContext,
+  NexTekMCPConfig,
+  NexTekMCPContext,
   AgentConfig,
   ToolConfig,
 } from "./types";
 
 export {
-  GudTekMCP,
+  NexTekMCP,
   Agent,
   Tool,
   BaseTool,
-  GudTekMCPConfig,
-  GudTekMCPContext,
+  NexTekMCPConfig,
+  NexTekMCPContext,
   AgentConfig,
   ToolConfig,
 };

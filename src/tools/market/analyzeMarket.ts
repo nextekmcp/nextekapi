@@ -1,7 +1,7 @@
 import { PublicKey } from "@solana/web3.js";
 import { z } from "zod";
 import { BaseTool } from "../../core/tool";
-import { GudTekMCPContext } from "../../types";
+import { NexTekMCPContext } from "../../types";
 
 // Known DEX Program IDs
 const DEX_PROGRAM_IDS = {
@@ -24,7 +24,7 @@ export const analyzeMarketTool = new (class extends BaseTool {
 
   async execute(
     params: { marketAddress: string },
-    context: GudTekMCPContext
+    context: NexTekMCPContext
   ): Promise<any> {
     const marketPubkey = new PublicKey(params.marketAddress);
 
@@ -62,7 +62,7 @@ export const analyzeMarketTool = new (class extends BaseTool {
 // Function to detect which DEX a token is trading on
 async function detectDEX(
   tokenAddress: PublicKey,
-  context: GudTekMCPContext
+  context: NexTekMCPContext
 ): Promise<string | null> {
   try {
     // Get all recent transactions for this token
@@ -125,7 +125,7 @@ async function detectDEX(
 // DEX-specific market analysis implementations
 async function analyzeRaydiumMarket(
   marketAddress: PublicKey,
-  context: GudTekMCPContext
+  context: NexTekMCPContext
 ) {
   // Get market account data
   const marketAccount = await context.connection.getAccountInfo(marketAddress);
@@ -172,7 +172,7 @@ async function analyzeRaydiumMarket(
 
 async function analyzeMeteoraMarket(
   marketAddress: PublicKey,
-  context: GudTekMCPContext
+  context: NexTekMCPContext
 ) {
   // Similar implementation to Raydium, but with Meteora-specific account structure
   const marketAccount = await context.connection.getAccountInfo(marketAddress);
@@ -192,7 +192,7 @@ async function analyzeMeteoraMarket(
 
 async function analyzeOrcaMarket(
   marketAddress: PublicKey,
-  context: GudTekMCPContext
+  context: NexTekMCPContext
 ) {
   // Similar implementation to Raydium, but with Orca-specific account structure
   const marketAccount = await context.connection.getAccountInfo(marketAddress);
@@ -212,7 +212,7 @@ async function analyzeOrcaMarket(
 
 async function analyzePumpFunMarket(
   marketAddress: PublicKey,
-  context: GudTekMCPContext
+  context: NexTekMCPContext
 ) {
   // Similar implementation to Raydium, but with PumpFun-specific account structure
   const marketAccount = await context.connection.getAccountInfo(marketAddress);

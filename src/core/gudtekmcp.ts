@@ -1,7 +1,7 @@
 import { Connection, Keypair, PublicKey } from "@solana/web3.js";
 import {
-  GudTekMCPConfig,
-  GudTekMCPContext,
+  NexTekMCPConfig,
+  NexTekMCPContext,
   AgentConfig,
   ToolConfig,
 } from "../types";
@@ -11,29 +11,29 @@ import { z } from "zod";
 import { Logger } from "../utils/logger";
 
 /**
- * GudTekMCP is the main class that manages agents, tools, and the execution context.
+ * NexTekMCP is the main class that manages agents, tools, and the execution context.
  * It provides a unified interface for creating and managing agents, registering tools,
  * and executing operations on the Solana blockchain.
  */
-export class GudTekMCP {
+export class NexTekMCP {
   private agents: Map<string, Agent>;
   private tools: Map<string, Tool>;
-  private context: GudTekMCPContext;
+  private context: NexTekMCPContext;
   private logger: Logger;
-  private config: GudTekMCPConfig;
+  private config: NexTekMCPConfig;
   private marketAnalysisInterval?: NodeJS.Timeout;
   private memoLoggingInterval?: NodeJS.Timeout;
 
   /**
-   * Creates a new GudTekMCP instance with the provided configuration.
+   * Creates a new NexTekMCP instance with the provided configuration.
    *
-   * @param config - The configuration for the GudTekMCP instance
+   * @param config - The configuration for the NexTekMCP instance
    */
-  constructor(config: GudTekMCPConfig) {
+  constructor(config: NexTekMCPConfig) {
     this.config = config;
     this.agents = new Map();
     this.tools = new Map();
-    this.logger = new Logger("GudTekMCP");
+    this.logger = new Logger("NexTekMCP");
     this.context = {
       connection: config.connection,
       wallet: config.wallet,
@@ -46,7 +46,7 @@ export class GudTekMCP {
         : undefined,
     };
 
-    this.logger.info("GudTekMCP initialized with connection to Solana network");
+    this.logger.info("NexTekMCP initialized with connection to Solana network");
   }
 
   /**
@@ -55,7 +55,7 @@ export class GudTekMCP {
    * @param config - The configuration for the agent
    * @returns The created agent
    */
-  public createAgent(config: GudTekMCPConfig): Agent {
+  public createAgent(config: NexTekMCPConfig): Agent {
     try {
       const agent = new Agent(config, this);
       this.agents.set(config.name || `agent-${this.agents.size}`, agent);
@@ -91,7 +91,7 @@ export class GudTekMCP {
   }
 
   /**
-   * Registers a tool with the GudTekMCP instance.
+   * Registers a tool with the NexTekMCP instance.
    *
    * @param tool - The tool to register
    */
@@ -111,14 +111,14 @@ export class GudTekMCP {
       const tool = new (class extends BaseTool {
         private handler: (
           params: any,
-          context: GudTekMCPContext
+          context: NexTekMCPContext
         ) => Promise<any>;
 
         constructor(
           name: string,
           description: string,
           parameters: z.ZodType<any>,
-          handler: (params: any, context: GudTekMCPContext) => Promise<any>
+          handler: (params: any, context: NexTekMCPContext) => Promise<any>
         ) {
           super(name, description, parameters);
           this.handler = handler;
@@ -126,7 +126,7 @@ export class GudTekMCP {
 
         public async execute(
           params: any,
-          context: GudTekMCPContext
+          context: NexTekMCPContext
         ): Promise<any> {
           // Validate parameters against schema
           const validatedParams = this.parameters.parse(params);
@@ -168,7 +168,7 @@ export class GudTekMCP {
    *
    * @returns The execution context
    */
-  public getContext(): GudTekMCPContext {
+  public getContext(): NexTekMCPContext {
     return this.context;
   }
 

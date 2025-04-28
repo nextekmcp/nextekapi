@@ -6,7 +6,7 @@ import {
 } from "@solana/web3.js";
 import { z } from "zod";
 import { BaseTool } from "../../core/tool";
-import { GudTekMCPContext } from "../../types";
+import { NexTekMCPContext } from "../../types";
 
 export const writeMemoTool = new (class extends BaseTool {
   constructor() {
@@ -22,7 +22,7 @@ export const writeMemoTool = new (class extends BaseTool {
 
   async execute(
     params: { programId: string; content: string },
-    context: GudTekMCPContext
+    context: NexTekMCPContext
   ): Promise<any> {
     if (!context.wallet) {
       throw new Error("No wallet available in context");

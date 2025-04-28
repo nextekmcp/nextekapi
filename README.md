@@ -1,111 +1,116 @@
-# GudTekMCP - AI-Powered Solana Token Analysis
+# NexTekMCP - AI-Powered Solana Token Analysis
 
-![GudTekMCP Banner](/images/banner.jpg)
+![NexTekMCP Banner](/images/banner.jpg)
 
-## AI-Powered Token Analysis for Solana
+## AI-Enhanced Analysis for Solana Tokens
 
-GudTekMCP is a revolutionary framework that brings AI-powered analysis to Solana token trading. By combining real-time market data with advanced AI models through the Model Context Protocol (MCP), GudTekMCP provides deep insights into token performance and market trends.
+**NexTekMCP** is a next-generation framework that brings powerful AI-driven analysis to Solana token trading. By fusing real-time market data with advanced AI models through the Model Context Protocol (MCP), NexTekMCP delivers deep insights into token performance and dynamic market trends.
 
-> 🚀 **First AI-Powered Token Analysis Framework for Solana!**  
-> GudTekMCP is the first framework to combine Solana blockchain data with AI analysis through MCP.
+> 🚀 **First AI-Driven Token Analysis Framework for Solana!**  
+> NexTekMCP is the first solution that combines live Solana blockchain data with AI-powered insights via MCP.
 
-## 🔍 What is GudTekMCP?
+## 🔍 What is NexTekMCP?
 
-GudTekMCP combines the power of:
+NexTekMCP combines the strengths of:
 
-- **Solana Blockchain**: High-performance blockchain for token trading
-- **Model Context Protocol (MCP)**: Open protocol for creating custom AI tools
-- **Multiple DEXes**: Support for Raydium, Meteora, Orca, and PumpFun
-- **Real-time Market Data**: Live price, volume, and liquidity analysis
+- **Solana Blockchain**: A high-performance foundation for fast and efficient token trading.
+- **Model Context Protocol (MCP)**: An open standard for building intelligent AI models.
+- **Multi-DEX Support**: Integrated with Raydium, Meteora, Orca, and PumpFun.
+- **Real-Time Market Intelligence**: Access to live pricing, trading volume, and liquidity metrics.
 
-With advanced AI analysis capabilities, GudTekMCP allows traders to:
+With NexTekMCP’s AI capabilities, traders can:
 
-- Get instant token analysis using natural language
-- Discover market trends and patterns
-- Assess token performance across multiple DEXes
-- Generate detailed market reports
+- Instantly analyze tokens using natural language
+- Uncover trends, opportunities, and risks
+- Monitor token performance across multiple DEX platforms
+- Generate comprehensive market analysis reports
 
 ## 📱 Community
 
-Join our community for updates and discussion:
+Join our community for updates, discussions, and support:
 
-- **Telegram**: [@gudtekofficial](https://t.me/gudtekofficial)
-- **Twitter**: [@GudTekMCP](https://x.com/GudTekMCP)
+- **Telegram**: [Join Here](https://t.me/something)
+- **Twitter/X**: [Follow Us](https://x.com/NexTek_MCP)
 
-## 🌟 Star History
+## ✨ Key Features
 
-[![Star History Chart](https://api.star-history.com/svg?repos=gudtekmcp/gudtek-mcp-api&type=Date)](https://www.star-history.com/gudtekmcp/gudtek-mcp-api&Date)
-
-## ✨ Features
-
-- **Natural Language Analysis**: Query token data using plain English
-- **Multi-DEX Support**:
+- **Natural Language Token Analysis**: Interact with the API using plain English queries.
+- **DEX Coverage**:
   - Raydium
   - Meteora
   - Orca
   - PumpFun
-- **Comprehensive Analysis**:
-  - Price analysis
-  - Volume analysis
-  - Liquidity monitoring
-  - Market sentiment
-  - Trading patterns
-  - Risk assessment
+- **In-Depth Analytics**:
+  - Price monitoring
+  - 24-hour trading volume tracking
+  - Liquidity analysis
+  - Sentiment and trend analysis
+  - Pattern recognition
+  - Risk evaluation
 
-## 📋 Prerequisites
+## 📋 Requirements
 
-- Node.js 16+
+- Node.js 16 or higher
 - TypeScript
-- Solana Web3.js
-- MCP Client
-- Access to Solana RPC endpoint
+- Solana Web3.js library
+- MCP Client integration
+- Access to a Solana RPC endpoint
 
-## 🔧 Installation
+## 🔧 Setup & Installation
 
-1. Clone this repository:
+1. Clone the repository:
 
    ```bash
-   git clone https://github.com/gudtekmcp/gudtek-mcp-api.git
-   ```
+   git clone https://github.com/KimmiJimmi/NexTek-API.git
 
-2. Install dependencies:
+2. Install Dependencies:
 
    ```bash
    npm install
-   ```
+   
+3. Configure Environment Variables:
 
-3. Configure environment variables:
+  Create a .env file in the project root with the following:
 
    ```env
    RPC_ENDPOINT=https://api.mainnet-beta.solana.com
    MCP_ENDPOINT=your_mcp_endpoint
    PORT=3000
-   ```
+   
+4. Start the Development Server:
 
-4. Start the server:
    ```bash
    npm run dev
-   ```
 
-## 🚀 Usage
+## 🚀 Using the API
 
-Example queries you can ask through the API:
+Use natural language queries to analyze Solana tokens through NexTekMCP.
+
+### Example Queries
 
 - "Analyze token 9BB6NFEcjBCtmNLFko2FqVQBq8HHM13kCyYcdQbgpump"
-- "Get market analysis for USDC on Raydium"
-- "Show me trading patterns for SOL"
-- "Generate a comprehensive report for this token"
+- "Provide a market analysis for USDC on Raydium"
+- "Show recent trading patterns for SOL"
+- "Generate a full market report for this token"
 
 ### API Endpoint
 
-```typescript
-POST /api/analyze-token
-{
-    "tokenAddress": "YOUR_TOKEN_ADDRESS"
-}
-```
+Send a `POST` request to:
 
-### Expected Response
+```http
+POST /api/analyze-token
+Content-Type: application/json
+
+### Request Body:
+
+```json
+{
+  "tokenAddress": "YOUR_TOKEN_ADDRESS"
+}
+
+### Example API Response
+
+Below is a sample response returned by NexTekMCP when you analyze a token:
 
 ```json
 {
@@ -129,24 +134,23 @@ POST /api/analyze-token
   },
   "sessionId": "uuid-v4"
 }
-```
 
-## 🔐 Security Considerations
+## 🔐 Security & Best Practices
 
-- Always validate token addresses
-- Use secure RPC endpoints
-- Implement rate limiting
-- Handle sensitive data properly
+Follow these best practices when working with NexTekMCP:
 
-## 📜 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙏 Acknowledgments
-
-- The Solana team for building an amazing blockchain
-- The DEX teams for providing market data
+- **Validate Inputs**: Always check token addresses before processing.
+- **Secure RPC Connections**: Use trusted Solana RPC endpoints.
+- **Rate Limiting**: Implement API rate limiting to protect your server.
+- **Protect Secrets**: Keep `.env` variables and sensitive configurations private and secured.
 
 ---
 
-_Note: This is not financial advice. GudTekMCP is a tool for market analysis and should be used responsibly._
+## 📱 Community & Support
+
+Stay connected for latest updates, discussions, and support:
+
+- **Telegram**: [Join Here](https://t.me/something)
+- **Twitter/X**: [Follow Us](https://x.com/NexTek_MCP)
+
+---
