@@ -61,7 +61,7 @@ Join our community for updates, discussions, and support:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/KimmiJimmi/NexTek-API.git
+   git clone https://github.com/nextekmcp/nextekapi.git
    ```
 
 2. Install Dependencies:
