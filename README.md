@@ -29,7 +29,6 @@ With NexTekMCP’s AI capabilities, traders can:
 
 Join our community for updates, discussions, and support:
 
-- **Telegram**: [Join Here](https://t.me/something)
 - **Twitter/X**: [Follow Us](https://x.com/NexTek_MCP)
 
 ## ✨ Key Features
