@@ -74,11 +74,11 @@ Join our community for updates, discussions, and support:
 
   Create a .env file in the project root with the following:
 
-   ```env
+   ````env
    RPC_ENDPOINT=https://api.mainnet-beta.solana.com
    MCP_ENDPOINT=your_mcp_endpoint
    PORT=3000
-   ```
+   ````
    
 4. Start the Development Server:
 
@@ -106,7 +106,7 @@ POST /api/analyze-token
 Content-Type: application/json
 ```
 
-### Request Body:
+### Request Body
 
 ```json
 {
