@@ -72,13 +72,13 @@ Join our community for updates, discussions, and support:
    
 3. Configure Environment Variables:
 
-  Create a .env file in the project root with the following:
+    Create a `.env` file in the project root with the following:
 
-   ````env
-   RPC_ENDPOINT=https://api.mainnet-beta.solana.com
-   MCP_ENDPOINT=your_mcp_endpoint
-   PORT=3000
-   ````
+    ```env
+    RPC_ENDPOINT=https://api.mainnet-beta.solana.com
+    MCP_ENDPOINT=your_mcp_endpoint
+    PORT=3000
+    ```
    
 4. Start the Development Server:
 
