@@ -1,6 +1,6 @@
 # NexTekMCP - AI-Powered Solana Token Analysis
 
-![NexTekMCP Banner](/images/banner.jpg)
+![NexTekMCP Banner](/images/banner.png)
 
 ## AI-Enhanced Analysis for Solana Tokens
 
@@ -62,11 +62,13 @@ Join our community for updates, discussions, and support:
 
    ```bash
    git clone https://github.com/KimmiJimmi/NexTek-API.git
+   ```
 
 2. Install Dependencies:
 
    ```bash
    npm install
+   ```
    
 3. Configure Environment Variables:
 
@@ -76,11 +78,13 @@ Join our community for updates, discussions, and support:
    RPC_ENDPOINT=https://api.mainnet-beta.solana.com
    MCP_ENDPOINT=your_mcp_endpoint
    PORT=3000
+   ```
    
 4. Start the Development Server:
 
    ```bash
    npm run dev
+   ```
 
 ## 🚀 Using the API
 
@@ -100,6 +104,7 @@ Send a `POST` request to:
 ```http
 POST /api/analyze-token
 Content-Type: application/json
+```
 
 ### Request Body:
 
@@ -107,6 +112,7 @@ Content-Type: application/json
 {
   "tokenAddress": "YOUR_TOKEN_ADDRESS"
 }
+```
 
 ### Example API Response
 
@@ -134,6 +140,7 @@ Below is a sample response returned by NexTekMCP when you analyze a token:
   },
   "sessionId": "uuid-v4"
 }
+```
 
 ## 🔐 Security & Best Practices
 
@@ -143,14 +150,5 @@ Follow these best practices when working with NexTekMCP:
 - **Secure RPC Connections**: Use trusted Solana RPC endpoints.
 - **Rate Limiting**: Implement API rate limiting to protect your server.
 - **Protect Secrets**: Keep `.env` variables and sensitive configurations private and secured.
-
----
-
-## 📱 Community & Support
-
-Stay connected for latest updates, discussions, and support:
-
-- **Telegram**: [Join Here](https://t.me/something)
-- **Twitter/X**: [Follow Us](https://x.com/NexTek_MCP)
 
 ---
