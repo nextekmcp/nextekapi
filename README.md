@@ -1,6 +1,6 @@
 # NexTekMCP - AI-Powered Solana Token Analysis
 
-![NexTekMCP Banner](/images/banner.png)
+![NexTekMCP Banner](/images/banner.jpg)
 
 ## AI-Enhanced Analysis for Solana Tokens
 
